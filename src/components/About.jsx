@@ -3,11 +3,16 @@ import video2 from "../assets/video-2.mp4";
 
 const About = () => {
   return (
-    <div id="about" className="w-[90%] pb-32 border-b-2 border-gray-200 mx-auto">
+    <div
+      id="about"
+      className="w-[90%] pb-32 border-b-2 border-gray-200 mx-auto"
+    >
       {/* Header Section */}
       <div className="cousine w-full flex flex-col sm:flex-row justify-between items-start sm:items-center text-white text-lg font-thin pt-2">
         <p>About</p>
-        <p className="sm:mt-0 mt-2">02/<span className="text-gray-400">05</span></p>
+        <p className="sm:mt-0 mt-2">
+          02/<span className="text-gray-400">05</span>
+        </p>
       </div>
 
       {/* Video and Title Section */}
@@ -30,7 +35,15 @@ const About = () => {
       {/* Text Section */}
       <div className="mt-20 px-4 sm:px-0">
         <h1 className="text-xl sm:text-2xl lg:text-4xl text-white text-center">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet quia, aliquam, accusamus labore dicta delectus, illo odit non exercitationem recusandae magnam sequi. Voluptatibus et doloribus debitis neque nam dolor fugit labore molestias est, vitae nesciunt, quae sed! Odit beatae est tempore nihil a? Et provident repellendus laboriosam harum saepe quod!
+          I’m a dedicated software developer with a strong foundation in
+          full-stack web development. With expertise in technologies like React,
+          Node.js, MongoDB, and Express, I specialize in building dynamic and
+          responsive web applications. I am driven by a passion for
+          problem-solving, constantly exploring new tools and technologies to
+          enhance my skills and create innovative digital solutions. Whether
+          it’s designing intuitive user interfaces or optimizing backend
+          performance, I thrive on delivering high-quality, scalable projects
+          that meet both business needs and user expectations.
         </h1>
       </div>
     </div>
