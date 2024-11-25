@@ -5,7 +5,7 @@ import Contacts from "./components/Contacts";
 import Hero from "./components/Hero";
 import Nav from "./components/Nav";
 import Skills from "./components/Skills";
-import Works from "./components/works";
+import Works from "./components/Works";
 
 function App() {
   const [videosLoaded, setVideosLoaded] = useState(0);
