@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-const WorkCard = ({ vid, tech, name, web, git, i, onVideoLoad  }) => {
+const WorkCard = ({ vid, tech, name, web, git, i, onVideoLoad }) => {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -50,18 +50,28 @@ const WorkCard = ({ vid, tech, name, web, git, i, onVideoLoad  }) => {
           <p className="text-base sm:text-lg">[Tech Stack]</p>
           <p className="text-gray-400 mt-2 text-sm sm:text-base">{tech}</p>
           <div className="flex flex-row lg:flex-col justify-between lg:items-end w-full lg:w-auto mt-6 gap-2 lg:gap-4">
-            <p className="cursor-pointer text-sm sm:text-base hover:text-gray-300">
+            <a
+              href={web}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer text-sm sm:text-base hover:text-gray-300"
+            >
               Visit Website
-            </p>
-            <p className="cursor-pointer text-sm sm:text-base hover:text-gray-300">
+            </a>
+            <a
+              href={git}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer text-sm sm:text-base hover:text-gray-300"
+            >
               View Code
-            </p>
+            </a>
           </div>
         </div>
 
         {/* Video Section */}
         <div className="lg:w-[75%] w-full">
-        <video
+          <video
             ref={videoRef}
             src={vid}
             className="rounded-l-full w-full"

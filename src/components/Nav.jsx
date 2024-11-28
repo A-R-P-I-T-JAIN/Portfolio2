@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import resume from "../assets/Arpit_Resume.pdf"
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +18,10 @@ const Nav = () => {
 
   return (
     <div className="w-[90%] sticky top-0 py-2 flex justify-between items-center text-white bg-black z-50">
-      <h1 className="text-xl cursor-pointer" onClick={() => scrollToSection("hero")}>
+      <h1
+        className="text-xl cursor-pointer"
+        onClick={() => scrollToSection("hero")}
+      >
         [ Arpit ]
       </h1>
 
@@ -53,19 +57,17 @@ const Nav = () => {
       </div>
 
       {/* Resume */}
-      <h1
-        className="hidden md:block border-b-2 border-white cursor-pointer"
-        onClick={() => alert("Resume Download Coming Soon!")}
-      >
-        Resume
-      </h1>
+      <a
+            className="border-b-2 border-white cursor-pointer"
+            href={resume} // Replace with the actual path to your file
+            download="Arpit_Resume.pdf" // Specify the file name to save as
+          >
+            Resume
+          </a>
 
       {/* Mobile Hamburger Icon */}
       <div className="md:hidden flex items-center">
-        <button
-          className="text-gray-500 hover:text-white"
-          onClick={toggleMenu}
-        >
+        <button className="text-gray-500 hover:text-white" onClick={toggleMenu}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -110,12 +112,13 @@ const Nav = () => {
           >
             Contact
           </p>
-          <h1
+          <a
             className="border-b-2 border-white cursor-pointer mt-4"
-            onClick={() => alert("Resume Download Coming Soon!")}
+            href={resume} // Replace with the actual path to your file
+            download="Arpit_Resume.pdf" // Specify the file name to save as
           >
             Resume
-          </h1>
+          </a>
         </div>
       )}
     </div>
