@@ -7,7 +7,7 @@ const Skills = () => {
       <div className="cousine w-full flex justify-between items-center text-white text-base sm:text-lg font-thin pt-2">
         <p>Skills</p>
         <p>
-          03/<span className="text-gray-400">05</span>
+          04/<span className="text-gray-400">05</span>
         </p>
       </div>
 
@@ -40,12 +40,12 @@ const Skills = () => {
             <h1 className="text-3xl sm:text-7xl kanit-extrabold">
               {section === 1 && "FRONTEND DEVELOPMENT"}
               {section === 2 && "BACKEND DEVELOPMENT"}
-              {section === 3 && "DESIGN AND TOOLS"}
+              {section === 3 && "DEVELOPER TOOLS"}
             </h1>
             <p className="text-lg sm:text-2xl text-gray-400 mt-4">
-              {section === 1 && "React, Vue, Svelte, GSAP, Webflow"}
-              {section === 2 && "Node.js, Express.js, MongoDB, PostgreSQL"}
-              {section === 3 && "Figma, Adobe XD, Illustrator, Photoshop"}
+              {section === 1 && "ReactJs, NextJs, Redux, React Native, GSAP, HTML, CSS, Js"}
+              {section === 2 && "Node.js, Express.js, MongoDB, MySQL"}
+              {section === 3 && "GitHub, VsCode, Android Studio"}
             </p>
           </div>
         </div>
