@@ -44,7 +44,7 @@ const Skills = () => {
             </h1>
             <p className="text-lg sm:text-2xl text-gray-400 mt-4">
               {section === 1 && "ReactJs, NextJs, Redux, React Native, GSAP, HTML, CSS, Js"}
-              {section === 2 && "Node.js, Express.js, MongoDB, MySQL"}
+              {section === 2 && "Node.js, Express.js, MongoDB, MySQL, Socket.io"}
               {section === 3 && "GitHub, VsCode, Android Studio"}
             </p>
           </div>
