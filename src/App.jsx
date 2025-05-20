@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import Nav from "./components/Nav";
 import Skills from "./components/Skills";
 import Works from "./components/Works";
+import Footer from "./components/Footer";
 
 function App() {
   const [videosLoaded, setVideosLoaded] = useState(0);
@@ -50,7 +51,8 @@ function App() {
       <Works onVideoLoad={handleVideoLoad} />
       <Skills />
       <Contacts />
-      </div>
+      <Footer />
+    </div>
     </>
   );
 }

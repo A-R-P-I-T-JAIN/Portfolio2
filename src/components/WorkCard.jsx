@@ -1,86 +1,63 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 
-const WorkCard = ({ vid, tech, name, web, git, i, onVideoLoad }) => {
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    const videoElement = videoRef.current;
-
-    // Ensure video autoplay and loop are set
-    if (videoElement) {
-      videoElement.loop = true;
-      videoElement.muted = true;
-    }
-
-    const handlePlayPause = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          videoElement?.play();
-        } else {
-          videoElement?.pause();
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(handlePlayPause, {
-      threshold: 0.5, // Trigger when at least 50% of the video is visible
-    });
-
-    if (videoElement) observer.observe(videoElement);
-
-    return () => {
-      if (videoElement) observer.unobserve(videoElement);
-    };
-  }, []);
-
+const WorkCard = ({ name, description, tech, image, web, git, color }) => {
   return (
-    <>
-      <div className="border-t-2 border-gray-700 mt-20">
-        <p className="text-white mt-6 text-sm sm:text-lg">
-          0{i}/<span className="text-gray-400">05</span>
-        </p>
-        <h1 className="text-white text-[10vw] sm:text-[6vw] lg:text-[4vw] kanit-extrabold mt-2">
-          {name.toUpperCase()}
-        </h1>
+    <motion.div
+      whileHover={{ y: -10 }}
+      transition={{ duration: 0.3 }}
+      className="group relative overflow-hidden rounded-lg bg-gray-900"
+    >
+      {/* Image Container */}
+      <div className="relative h-48 overflow-hidden">
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+        <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-6 mt-8">
-        {/* Tech Stack Section */}
-        <div className="lg:w-[25%] w-full text-white flex flex-col items-start lg:items-end">
-          <p className="text-base sm:text-lg">[Tech Stack]</p>
-          <p className="text-gray-400 mt-2 text-sm sm:text-base">{tech}</p>
-          <div className="flex flex-row lg:flex-col justify-between lg:items-end w-full lg:w-auto mt-6 gap-2 lg:gap-4">
-            <a
-              href={web}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer text-sm sm:text-base hover:text-gray-300"
+      {/* Content */}
+      <div className="p-6">
+        <h3 className="text-xl font-bold text-white mb-2">{name}</h3>
+        <p className="text-gray-400 text-sm mb-4 line-clamp-2">{description}</p>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {tech.split(", ").map((item, index) => (
+            <span
+              key={index}
+              className="px-2 py-1 text-xs bg-gray-800 text-gray-300 rounded-full"
             >
-              Visit Website
-            </a>
-            <a
-              href={git}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer text-sm sm:text-base hover:text-gray-300"
-            >
-              View Code
-            </a>
-          </div>
+              {item}
+            </span>
+          ))}
         </div>
-
-        {/* Video Section */}
-        <div className="lg:w-[75%] w-full">
-          <video
-            ref={videoRef}
-            src={vid}
-            className="rounded-l-full w-full"
-            onLoadedData={onVideoLoad}
-          ></video>
+        <div className="flex gap-4">
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            href={web}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-full text-sm transition-colors duration-300"
+          >
+            Live Demo
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            href={git}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white border border-gray-600 hover:border-gray-400 px-4 py-2 rounded-full text-sm transition-colors duration-300"
+          >
+            Source Code
+          </motion.a>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 };
 
 export default WorkCard;
+
