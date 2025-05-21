@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import WorkCard from "./WorkCard";
-import ExpenseSplitter from "../assets/expense_splitter.png"
-import DocX from "../assets/docx.png"
-
+import ExpenseSplitter from "../assets/expense_splitter.png";
+import DoodleSense from "../assets/doodlesense.png";
+import Docx from "../assets/docx.png";
 
 const Works = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,29 +15,29 @@ const Works = () => {
       description: "A collaborative expense management platform that helps groups split bills and track shared expenses in real-time.",
       tech: "ReactJs, NodeJs, MongoDb, ExpressJs, SocketIo, Gsap",
       image: ExpenseSplitter,
-      web: "https://expense-splitter-seven.vercel.app/",
+      web: "https://main--expensplitter.netlify.app/",
       git: "https://github.com/A-R-P-I-T-JAIN/Expense-Splitter",
-      color: "from-blue-500/20 to-purple-500/20"
+      color: ""
     },
     {
       id: 2,
       name: "DoodleSense",
       description: "An AI-powered drawing application that transforms your sketches into meaningful insights and creative designs.",
       tech: "React, Node, MongoDb, Express, GenAi, Gsap",
-      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      image: DoodleSense,
       web: "https://doodle-sense.vercel.app/",
       git: "https://github.com/A-R-P-I-T-JAIN/DoodleSense",
-      color: "from-pink-500/20 to-orange-500/20"
+      color: ""
     },
     {
       id: 3,
       name: "Docx",
       description: "A modern document management system with real-time collaboration features and seamless sharing capabilities.",
       tech: "NextJs, Gsap",
-      image: DocX,
+      image: Docx,
       web: "https://docxx-tawny.vercel.app/",
       git: "https://github.com/A-R-P-I-T-JAIN/docX",
-      color: "from-green-500/20 to-teal-500/20"
+      color: ""
     },
     // {
     //   id: 4,
