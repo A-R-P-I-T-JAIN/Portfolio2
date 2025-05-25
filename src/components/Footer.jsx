@@ -26,7 +26,7 @@ const Footer = () => {
           className="flex items-center gap-6"
         >
           <motion.a
-            href="https://github.com"
+            href="https://github.com/A-R-P-I-T-JAIN"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
@@ -35,7 +35,7 @@ const Footer = () => {
             <FaGithub size={20} />
           </motion.a>
           <motion.a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/arpit-jain-b7b940257/"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
@@ -44,7 +44,7 @@ const Footer = () => {
             <FaLinkedin size={20} />
           </motion.a>
           <motion.a
-            href="https://twitter.com"
+            href="https://x.com/ArpitJain0805"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}

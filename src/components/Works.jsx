@@ -4,6 +4,9 @@ import WorkCard from "./WorkCard";
 import ExpenseSplitter from "../assets/expense_splitter.png";
 import DoodleSense from "../assets/doodlesense.png";
 import Docx from "../assets/docx.png";
+import Stream from "../assets/stream.png";
+import Code2Concept from "../assets/code2concept.png";
+import Kaiji from "../assets/kaiji.png";
 
 const Works = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -39,36 +42,36 @@ const Works = () => {
       git: "https://github.com/A-R-P-I-T-JAIN/docX",
       color: ""
     },
-    // {
-    //   id: 4,
-    //   name: "TaskFlow",
-    //   description: "An intelligent task management system with AI-powered prioritization and automated workflow optimization.",
-    //   tech: "React, TypeScript, Firebase, OpenAI API, TailwindCSS",
-    //   image: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    //   web: "#",
-    //   git: "#",
-    //   color: "from-indigo-500/20 to-cyan-500/20"
-    // },
-    // {
-    //   id: 5,
-    //   name: "EcoTrack",
-    //   description: "A sustainability monitoring platform that helps businesses track and reduce their environmental impact.",
-    //   tech: "Next.js, Python, TensorFlow, PostgreSQL, D3.js",
-    //   image: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    //   web: "#",
-    //   git: "#",
-    //   color: "from-emerald-500/20 to-teal-500/20"
-    // },
-    // {
-    //   id: 6,
-    //   name: "SoundScape",
-    //   description: "An immersive audio experience platform that creates personalized sound environments for productivity and relaxation.",
-    //   tech: "React Native, Web Audio API, Node.js, MongoDB, WebGL",
-    //   image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    //   web: "#",
-    //   git: "#",
-    //   color: "from-violet-500/20 to-fuchsia-500/20"
-    // }
+    {
+      id: 4,
+      name: "Stream",
+      description: "A website for group video calling and streaming",
+      tech: "React, Node, Express, TailwindCSS",
+      image: Stream,
+      web: "https://stream-five-iota.vercel.app/",
+      git: "https://github.com/A-R-P-I-T-JAIN/stream",
+      color: ""
+    },
+    {
+      id: 5,
+      name: "Code2Concept",
+      description: "A web app that visually explains Data Structures and Algorithms through interactive animations",
+      tech: "React.js, Python, Node.js, Gemini, Express.js",
+      image: Code2Concept,
+      web: "#",
+      git: "https://github.com/A-R-P-I-T-JAIN/Code2Concept",
+      color: ""
+    },
+    {
+      id: 6,
+      name: "Kaiji",
+      description: "A 3d card game.",
+      tech: "Html, Css, Javascript",
+      image: Kaiji,
+      web: "https://kaijiii.netlify.app/",
+      git: "https://github.com/A-R-P-I-T-JAIN/Kaiji",
+      color: ""
+    }
   ];
 
   return (

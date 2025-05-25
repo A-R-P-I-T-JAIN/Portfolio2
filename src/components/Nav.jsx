@@ -59,9 +59,8 @@ const Nav = () => {
       {/* Resume */}
       <a
             className="border-b-2 border-white cursor-pointer"
-            href={resume} // Replace with the actual path to your file
-            download="Arpit_Resume.pdf" // Specify the file name to save as
-          >
+            href="https://drive.google.com/file/d/1iF4VNUntKgK7GZM9KgGVDJv6mVXAIsym/view?usp=sharing"
+            target="_blank" >
             Resume
           </a>
 
